@@ -15,7 +15,7 @@ export class CategoryPageComponent implements OnInit {
   products: ProductI[];
   totalProducts: number;
   name: string;
-  pageSize: number = 3;
+  pageSize: number = 5;
   pageIndex: number = 0;
   searchQuery: string = '';
   @ViewChild('paginator') paginator: MatPaginator;
@@ -31,9 +31,8 @@ export class CategoryPageComponent implements OnInit {
   }
 
   onSearch(): void {
-    this.pageIndex=0;
     this.paginator.firstPage();
-    this.loadProducts(0, this.pageSize);
+    this.loadProducts(0, this.paginator.pageSize);
   }
 
   private loadProducts(pageIndex: number, pageSize: number): void {

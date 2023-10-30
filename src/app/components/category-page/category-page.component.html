@@ -11,7 +11,6 @@
           required
           [(ngModel)]="searchQuery"
           (keyup.enter)="onSearch()"
-          (focusout)="onSearch()"
         >
       </div>
     </div>
@@ -20,7 +19,14 @@
         *ngFor="let product of products"
         [product]="product"/>
     </div>
-     <mat-paginator #paginator class="mt-5" [length]="totalProducts" [pageSize]="pageSize" (page)="onPageEvent($event)"/>
+     <mat-paginator
+       #paginator
+       class="mt-5"
+       [length]="totalProducts"
+       [pageSize]="pageSize"
+       (page)="onPageEvent($event)"
+       [pageSizeOptions]="[3,5,10,20]"
+     />
   </div>
 </div>
 
