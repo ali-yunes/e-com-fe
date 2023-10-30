@@ -1,23 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-type': 'application/json'
-  })
-}
-
-interface ProductI {
-  id: string;
-  name: string;
-  category: string;
-  price: number;
-  discount: number;
-  image: string;
-  ratingAverage: number;
-  reviewCount: number
-}
+import {ProductI} from "../models/products";
 
 interface ProductsResult {
   products: ProductI[];

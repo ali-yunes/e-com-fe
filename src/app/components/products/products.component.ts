@@ -1,16 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
-
-interface ProductI {
-  id: string;
-  name: string;
-  category: string;
-  price: number;
-  discount: number;
-  image: string;
-  ratingAverage: number;
-  reviewCount: number
-}
+import {ProductI} from "../../models/products";
 
 @Component({
   selector: 'app-products',
@@ -23,7 +13,6 @@ export class ProductsComponent implements OnInit {
   @Input() category: string;
   page: number = 0;
   limit: number = 10;
-  
   products: ProductI[];
   total: number;
 
