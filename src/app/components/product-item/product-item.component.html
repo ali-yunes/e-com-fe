@@ -1,10 +1,10 @@
 <div class="flex flex-col px-3 py-2 mx-3 w-[200px]">
-    <div class=" flex items-center justify-center w-full h-[250px] cursor-pointer">
+    <div [routerLink]="['/products',product.id]" class=" flex items-center justify-center w-full h-[250px] cursor-pointer">
         <img src={{product.image}} alt={{product.name}} class="object-cover"/>
     </div>
     <div class="flex flex-col justify-center items-center mt-2">
         <div class="flex items-center justify-start w-full">
-            <h4 class="text-xl font-light cursor-pointer hover:text-cyan">{{product.name}}</h4>
+            <h4 class="text-xl font-light cursor-pointer hover:text-cyan" [routerLink]="['/products',product.id]">{{product.name}}</h4>
         </div>
         <div class="flex items-center justify-start w-full mt-3">
             <div [ngStyle]="{'color': product.reviewCount ? '#13C6FF': 'grey'}" class="text-xl">
