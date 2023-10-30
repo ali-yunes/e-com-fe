@@ -15,6 +15,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoryPageComponent } from './components/category-page/category-page.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatMenuModule} from '@angular/material/menu';
 import {FormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -38,7 +39,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     HttpClientModule,
     MatPaginatorModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

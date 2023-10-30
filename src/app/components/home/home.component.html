@@ -1,4 +1,17 @@
 <div class="px-10">
+    <div [matMenuTriggerFor]="menu" class="bg-cyan w-fit px-5 py-3 rounded-lg text-white hover:bg-cyan/70">
+        <fa-icon [icon]="faMagnifyingGlass"/>
+        <button class="ml-3 font-semibold">Catalog</button>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/category','Smartphones']">Smartphones</button>
+      <button mat-menu-item [routerLink]="['/category','Watches']">Watches</button>
+      <button mat-menu-item [routerLink]="['/category','Laptops']">Laptops</button>
+      <button mat-menu-item [routerLink]="['/category','Kitchen']">Kitchen</button>
+      <button mat-menu-item [routerLink]="['/category','Earphones']">Earphones</button>
+      <button mat-menu-item [routerLink]="['/category','ACs']">ACs</button>
+      <button mat-menu-item [routerLink]="['/category','Coffee']">Coffee</button>
+    </mat-menu>
   <app-products searchTerm="" category="Electronics"/>
   <app-categories/>
   <app-products searchTerm="" category="Electronics"/>
