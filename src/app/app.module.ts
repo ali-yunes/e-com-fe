@@ -15,6 +15,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoryPageComponent } from './components/category-page/category-page.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
