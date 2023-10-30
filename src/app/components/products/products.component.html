@@ -1,9 +1,13 @@
 <div class="my-5 py-5 px-5 border-t-[2px]">
     <h3 class="text-3xl">{{category}}</h3>
-    <div class="flex items-center justify-start overflow-x-auto">
-        <app-product-item
+  <div class="flex">
+    <button (click)="scrollLeft()">←</button>
+    <div #scrollableProducts class="flex items-center justify-start overflow-x-auto mx-3">
+      <app-product-item
         *ngFor="let product of products"
         [product]="product"/>
     </div>
+    <button (click)="scrollRight()">→</button>
+  </div>
 </div>
 
