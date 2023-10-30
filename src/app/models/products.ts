@@ -21,12 +21,12 @@ export interface ProductDetailsI {
   image: string;
   quantity: number;
   sold: number;
-  reviews: Review[];
+  reviews: ReviewI[];
   ratingAverage: number;
   reviewCount: number;
 }
 
-interface Review {
+export interface ReviewI {
   _id: string;
   userId: string;
   title: string;
