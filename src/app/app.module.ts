@@ -10,6 +10,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './components/category/category.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     ProductsComponent,
     ProductItemComponent,
     CategoryComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

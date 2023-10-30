@@ -1,0 +1,30 @@
+<div class="flex justify-center">
+    <div class="flex justify-center px-5 max-w-[1200px]">
+        <div class="w-[50%] px-5">
+            <img src={{product.image}} class="object-cover">
+        </div>
+        <div class="flex flex-col w-[50%] overflow-hidden">
+            <h1 class="text-2xl font-bold md:text-3xl lg:text-4xl">{{product.name}}</h1>
+            <div class="flex items-center justify-start w-full mt-3">
+                <div [ngStyle]="{'color': product.reviewCount ? '#13C6FF': 'grey'}" class="md:text-xl">
+                    <fa-icon [icon]="faStar"/>
+                </div>
+                <h4 *ngIf="product.reviewCount" class="md:text-xl text-cyan font-semibold ml-2">{{product.ratingAverage.toFixed(2)}}</h4>
+                <h4 class="text-sm md:text-base text-black/50 ml-2 font-light">{{product.reviewCount}} reviews</h4>
+            </div>
+            <h3 class="md:text-xl font-semibold mt-5">Details</h3>
+            <h4 class="text-sm md:text-lg text-black/50">{{product.description}}</h4>
+            <div class="flex items-center w-full mt-5">
+              <button class="text-xl text-white px-3 py-1 rounded-xl bg-cyan hover:bg-white hover:text-cyan mr-5">
+                <fa-icon [icon]="faCartShopping"/>
+              </button>
+              <button class="text-xl text-black/40 hover:text-red-500 mr-5">
+                <fa-icon [icon]="faHeart"/>
+              </button>
+              <button class="text-xl text-black/40 hover:text-cyan">
+                <fa-icon [icon]="faCodeCompare"/>
+              </button>
+            </div>
+        </div>
+    </div>
+</div>
