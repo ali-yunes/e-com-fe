@@ -13,6 +13,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ReviewComponent } from './components/review/review.component';
 import { HomeComponent } from './components/home/home.component';
+import { CategoryPageComponent } from './components/category-page/category-page.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { HomeComponent } from './components/home/home.component';
     CategoriesComponent,
     ProductDetailsComponent,
     ReviewComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

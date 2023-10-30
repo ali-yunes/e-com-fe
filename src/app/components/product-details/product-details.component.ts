@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductDetailsI } from 'src/app/models/products';
 import { ProductService } from '../../services/product.service';
 import { faStar, faCartShopping, faHeart, faCodeCompare } from '@fortawesome/free-solid-svg-icons';
