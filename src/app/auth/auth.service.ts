@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {Injectable} from "@angular/core";
 @Injectable({
@@ -24,6 +24,6 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   authenticate(username: string, password: string): Observable<{message:string}> {
-    return this.http.post<{message:string}>(`${this.apiUrl}/login`, { username, password });
+    return this.http.post<{message:string}>(`${this.apiUrl}/login`, { username, password }, {withCredentials: true});
   }
 }
