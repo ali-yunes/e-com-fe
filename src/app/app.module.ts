@@ -18,6 +18,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatMenuModule} from '@angular/material/menu';
 import {FormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CreateProductComponent } from './components/create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     ProductDetailsComponent,
     ReviewComponent,
     HomeComponent,
-    CategoryPageComponent
+    CategoryPageComponent,
+    CreateProductComponent
   ],
   imports: [
     BrowserModule,
