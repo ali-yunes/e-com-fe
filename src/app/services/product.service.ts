@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ProductDetailsI, ProductI} from "../models/products";
+import {environment} from "../../environments/environment";
 
 interface ProductsResult {
   products: ProductI[];
@@ -14,7 +15,7 @@ interface ProductsResult {
 
 export class ProductService {
 
-  private apiUrl = 'http://localhost:8080/products';
+  private apiUrl = environment.apiUrl+'/products';
 
   constructor(private http: HttpClient) {}
 
