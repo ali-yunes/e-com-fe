@@ -5,7 +5,7 @@ import {Injectable} from "@angular/core";
   providedIn: "root"
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8080/auth/login';
+  private apiUrl = 'http://localhost:8080/auth';
 
   private loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -24,6 +24,6 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   authenticate(username: string, password: string): Observable<{message:string}> {
-    return this.http.post<{message:string}>(this.apiUrl, { username, password });
+    return this.http.post<{message:string}>(`${this.apiUrl}/login`, { username, password });
   }
 }
