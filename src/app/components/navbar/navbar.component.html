@@ -11,7 +11,26 @@
             </button>
           </div>
           <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
-            <ul class="flex flex-col lg:flex-row list-none ml-auto">
+            <ul class="flex flex-col lg:flex-row lg:items-center ml-auto">
+              <div *ngIf="(authService.isLoggedIn | async); else loginTemplate" class="flex">
+                <li class="nav-item">
+                  <a class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60 cursor-pointer" (click)="logout()">
+                    Logout
+                  </a>
+                </li>
+                <li class="nav-item" [routerLink]="['/manage']">
+                  <a class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60">
+                    Manage
+                  </a>
+                </li>
+              </div>
+              <ng-template #loginTemplate>
+                <li class="nav-item">
+                  <a [routerLink]="['/auth/login']" class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60">
+                    Login
+                  </a>
+                </li>
+              </ng-template>
               <li class="nav-item">
                 <a routerLink="/shops" class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60">
                   Shops
@@ -20,11 +39,6 @@
               <li class="nav-item">
                 <a routerLink="/delivery" class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60">
                     Delivery
-                </a>
-              </li>
-              <li class="nav-item">
-                <a routerLink="/about" class="px-3 py-2 flex items-center text-lg uppercase font-semibold leading-snug hover:opacity-60">
-                    About
                 </a>
               </li>
             </ul>

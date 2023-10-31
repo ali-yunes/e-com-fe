@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'category/:name', component: CategoryPageComponent },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
